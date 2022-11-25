@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="446d5b11-d881-4d28-9ec9-539ef2c22e50">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="media" class="java.lang.String"/>
+	<field name="totalPagas" class="java.lang.String"/>
+	<field name="devedorMenor" class="java.lang.String"/>
+	<field name="devedorMaior" class="java.lang.String"/>
+	<field name="menorDivida" class="java.lang.String"/>
+	<field name="maiorDivida" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="21" width="195" height="58" uuid="e636528b-5c0b-4c71-b0f9-d1946da0af94"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="36"/>
+				</textElement>
+				<text><![CDATA[Relatório]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="84" height="20" uuid="45702aee-2d7b-4c7a-8f28-a53da31fa887"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Total em dívidas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="3" width="71" height="20" uuid="150ac343-8409-4b6f-8713-8f5af09b74ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="183" y="3" width="91" height="20" uuid="5d53bc26-2721-4b29-87db-c390a21dea65"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Média das dívidas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="274" y="3" width="71" height="20" uuid="5d911cec-4004-445e-8871-e17b34337430"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{media}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="368" y="3" width="116" height="20" uuid="720857ce-20f8-484d-ab0b-e34751316969"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Total em dívidas pagas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="46" width="149" height="20" uuid="baf4f41a-a61d-4aeb-8dd4-49083a6fec8a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Devedor com menor dívida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="46" width="125" height="20" uuid="baa2b903-c86e-4b54-bc92-ac29dd9c7c41"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{devedorMenor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="287" y="46" width="149" height="20" uuid="bd5e686d-baa9-41aa-92fc-f0a9dead3656"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Devedor com maior dívida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="436" y="46" width="119" height="20" uuid="aa70b995-2ebd-4ef4-b05b-6e4c69f87889"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{devedorMenor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="89" width="149" height="20" uuid="ae37027b-2c33-4a22-988c-52d6ffea0132"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor da dívida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="89" width="125" height="20" uuid="cda1d63e-3f85-4205-9761-1d0777a37314"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{menorDivida}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="287" y="89" width="149" height="20" uuid="9569891a-333e-45bb-bf22-eee11526ea08"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor da dívida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="436" y="89" width="119" height="20" uuid="beaf0d22-4570-4596-9686-c7d067b3e767"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maiorDivida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="3" width="71" height="20" uuid="aff91e4e-a488-4ccb-90e9-bfae50a5707b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPagas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
